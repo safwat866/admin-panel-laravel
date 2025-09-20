@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_424" data-name="Group 424" transform="translate(-112 -631)">
+    <g id="Group_420" data-name="Group 420" transform="translate(0 75)">
+      <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(112 556)" fill="#fff" stroke="#a3159d" stroke-width="1">
+        <circle cx="25" cy="25" r="25" stroke="none"/>
+        <circle cx="25" cy="25" r="24.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_423" data-name="Group 423" transform="translate(-11354.641 2036.924)">
+      <g id="credit-card" transform="translate(11478 -1390)">
+        <g id="Group_422" data-name="Group 422" transform="translate(0 0)">
+          <g id="Group_421" data-name="Group 421">
+            <path id="Path_193" data-name="Path 193" d="M26.208,88.177H25.77a.409.409,0,1,0,0,.818h.437a.9.9,0,0,1,.9.9v14.867a.9.9,0,0,1-.9.9H1.721a.9.9,0,0,1-.9-.9V89.9a.9.9,0,0,1,.9-.9h22.3a.409.409,0,0,0,0-.818H1.721A1.723,1.723,0,0,0,0,89.9v14.867a1.723,1.723,0,0,0,1.721,1.721H26.208a1.723,1.723,0,0,0,1.721-1.721V89.9A1.723,1.723,0,0,0,26.208,88.177Z" transform="translate(0 -88.177)" fill="#a3159d"/>
+          </g>
+        </g>
+      </g>
+      <path id="transfer" d="M17.857,85.5a.279.279,0,0,1-.1.213l-4.68,3.97a.279.279,0,0,1-.459-.213V87.759H4.959a.279.279,0,0,1,0-.558H12.9a.279.279,0,0,1,.279.279v1.382l3.97-3.367-3.97-3.367V83.51a.279.279,0,0,1-.279.279H5.238V85.5a.279.279,0,0,1-.46.213L.1,81.738a.279.279,0,0,1,0-.426l4.68-3.97a.279.279,0,0,1,.46.213v1.706H12.9a.279.279,0,0,1,0,.558H4.959a.279.279,0,0,1-.279-.279V78.159L.71,81.526l3.97,3.367V83.51a.279.279,0,0,1,.279-.279h7.66V81.526a.279.279,0,0,1,.46-.213l4.68,3.97a.279.279,0,0,1,.1.213Z" transform="translate(11483.019 -1464.331)" fill="#a3159d"/>
+    </g>
+  </g>
+</svg>

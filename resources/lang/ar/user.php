@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'updated'                          => 'تم تعديل البيانات بنجاح.',
+    'incorrect_old_pass'               => 'كلمة المرور القديمة غير صحيحة.',
+    'account_deleted'                  => 'تم حذف الحساب بنجاح.',
+    'invitation_exist'                 => 'الدعوة موجودة بالفعل.',
+    'cant_send_invitation_to_yourself' => 'لا يمكنك إرسال دعوة لنفسك.',
+    'invitation_sent'                  => 'تم إرسال الدعوة.',
+    'invitation_dosnt_exist'           => 'دعوة لا وجود لها.',
+    'invitation_accepted'              => 'تم قبول الدعوة.',
+    'invitation_rejected'              => 'تم رفض الدعوة.',
+    'invitation_deleted'               => 'تم حذف الدعوة.',
+    'number_dosnt_exist'               => 'رقم لا وجود له.',
+    'number_updated'                   => 'تم تحديث الرقم.',
+    'number_deleted'                   => 'تم حذف الرقم.',
+    'valid'                            => 'صالح',
+    'expired'                          => 'منتهية الصلاحية',
+    'waiting'                          => 'في انتظار النتيجة',
+    'won'                              => 'فاز',
+    'lost'                             => 'خسر',
+    'address_saved'                    => 'تم حفظ العنوان',
+    'address_updated'                  => 'تم تعديل العنوان',
+    'address_deleted'                  => 'تم حذف',
+];

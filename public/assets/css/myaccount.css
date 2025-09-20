@@ -1,0 +1,420 @@
+
+:root {
+    --h1: 4.209rem;
+    --h2: 3.157rem;
+    --h3: 2.2rem;
+    --h4: 1.9rem;
+    --h5: 1.76rem;
+    --h6: 1.40rem;
+    --p: 1.20rem;
+    --small: 1rem;
+    --special:7.5rem;
+    --primary-font:'Lato', sans-serif;
+    --secondary-font:'Pacifico', sans-serif;
+    --padding:0.5rem;
+    --font-weight:400;
+    --font-weight1:600;
+    --primary-color:#000000;
+    --secondary-color: #A3159D;
+    --third-color: #fff;
+    --four-color: #FBBF11;
+  
+  }
+ 
+.myaccount-tab-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    border: 1px solid  var(--secondary-color);
+    border-radius:10px;
+    /* border-bottom-left-radius: 10px; */
+  }
+  
+  .myaccount-tab-menu a {
+    /* border: 1px solid #E8E8E8; */
+    border-bottom: none;
+    color: var(--primary-color);
+     font-weight: var(--font-weight);
+    font-size: var(--p);
+    display: block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+  }
+  
+  /* .myaccount-tab-menu a:last-child {
+    border-bottom: 1px solid #E8E8E8;
+  }
+   */
+  .myaccount-tab-menu a:hover, .myaccount-tab-menu a.active {
+    background-color:  var(--secondary-color);
+    border-color:  var(--secondary-color);
+    color: #fff;
+  }
+  a#dts.active {
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+  }
+  img.img-acc a.active{
+    filter: brightness(50);
+  }
+  .myaccount-tab-menu a i {
+     font-size: var(--small);
+    text-align: center;
+    width: 25px;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    #myaccountContent {
+      margin-top: 30px;
+    }
+  }
+  .fa.fa-caret-down {
+    float: right;
+    line-height: 2;
+}
+
+
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.msg:last-of-type {
+  margin: 0;
+}
+.msg-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.msg-bubble {
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #e9e9e9;
+}
+.msg-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.msg-info-name {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.msg-info-time {
+  font-size: 0.85em;
+}
+
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 0;
+}
+
+.right-msg {
+  flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+  background: var(--right-msg-bg);
+  color: #fff;
+  border-bottom-right-radius: 0;
+}
+.right-msg .msg-img {
+  margin: 0 0 0 10px;
+}
+
+/* Styling the reply to comment form */
+
+.reply-form textarea {
+  
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border: 1px solid;
+    border-radius: 5px;
+}
+.d-none {
+  display: none;
+}
+.filelabel {
+  width: 120px;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel i,
+.filelabel .title {
+color: var(--secondary-color);
+transition: 200ms color;
+}
+.filelabel:hover {
+border: 2px solid #1cc416;
+}
+.filelabel:hover i,
+.filelabel:hover .title {
+color: #1cc416;
+}
+#FileInput{
+  display:none;
+}
+
+  .myaccount-content {
+    border: 1px solid var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  }
+  
+  @media only screen and (max-width: 575px) {
+    .myaccount-content {
+      padding: 20px 15px;
+    }
+  }
+  
+  .myaccount-content form {
+    margin-top: -20px;
+  }
+  
+  .myaccount-content form .single-input-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  
+  .myaccount-content form .single-input-item input {
+    width: 100%;
+    padding: 8px 8px;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: 0;
+    /* text-align: right; */
+    padding-right: 45px;
+    color: var(--primary-color);
+  }
+  img.edit-reg {
+    float: right;
+    margin-top: -1.9rem;
+}
+input#phone {
+    /* z-index: -1; */
+}
+#field_phone {
+    width: 70%;
+    height: 50px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+select#pays {
+    border: none;
+  width: 95%;
+    /* text-align: right; */
+    color: var(--primary-color)
+}
+.select {
+    border-bottom: 1px solid var(--secondary-color);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--primary-color);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--primary-color);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--primary-color);
+  }
+  .intl-tel-input.allow-dropdown {
+    width: 100%;
+    
+}
+/* .myaccount-content form .single-input-item input::placeholder {  
+    box-shadow: 0 0 4px #00000026;
+ width: 50%;
+ float: right;
+ padding: 5px;
+} */
+
+a.pri-head {
+  background: #a3159d;
+  padding-top: 18px;
+}
+  .myaccount-content form .single-item-button {
+    width: 25%;
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .myaccount-content form .single-item-button {
+      width: 30%;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .myaccount-content form .single-item-button {
+      width: 45%;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .myaccount-content form .single-item-button {
+      width: 100%;
+    }
+  }
+  
+  .myaccount-content .title {
+    font-size: 24px;
+   font-family: var(--primary-font);
+    color: var(--primary-color);
+    border-bottom: 1px dashed #E8E8E8;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+     font-weight: var(--font-weight);
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+    .myaccount-content .title {
+       font-size: var(--h6);
+    }
+  }
+  
+  .myaccount-content .welcome a {
+    color: var(--primary-color);
+  }
+  
+  .myaccount-content .welcome a:hover {
+    color:  var(--secondary-color);
+  }
+  
+  .myaccount-content .welcome strong {
+    font-weight: 600;
+    color:  var(--secondary-color);
+  }
+  
+  .myaccount-content fieldset {
+    margin-top: 20px;
+  }
+  
+  .myaccount-content fieldset legend {
+    color: var(--primary-color);
+     font-size: var(--h6);
+    margin-top: 20px;
+     font-weight: var(--font-weight);
+    border-bottom: 1px dashed #E8E8E8;
+  }
+  
+  .myaccount-table {
+    white-space: nowrap;
+     font-size: var(--small);
+  }
+  
+  .myaccount-table table th, .myaccount-table .table th {
+    color: var(--third-color);
+    padding: 10px;
+     font-weight: var(--font-weight);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-bottom: 0;
+  }
+  
+  .myaccount-table table td, .myaccount-table .table td {
+    padding: 10px;
+    vertical-align: middle;
+    border-color: #E8E8E8;
+  }
+  
+  .saved-message {
+    background-color: #E8E8E8;
+    border-top: 3px solid  var(--secondary-color);
+    border-radius: 5px 5px 0 0;
+    font-weight: 600;
+    font-size: 15px;
+    color: #666666;
+    padding: 20px;
+  }
+  .copy-text {
+	position: relative;
+    padding: 5px;
+    background: #fbbf11;
+    border: 1px solid #fbbf11;
+    border-radius: 10px;
+    display: flex;
+}
+.copy-text input.text {
+	padding: 6px;
+    font-size: var(--small);
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.copy-text button {
+	padding: 7px;
+    background: var(--secondary-color);
+    color: var(--third-color);
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 40px;
+}
+
+.copy-text button:active {
+	background: var(--secondary-color);
+}
+.copy-text button:before {
+	content: "Copied";
+	position: absolute;
+	top: -45px;
+	right: 0px;
+	background:var(--secondary-color);
+	padding: 8px 10px;
+	border-radius: 20px;
+	font-size: 15px;
+	display: none;
+}
+
+.copy-text.active button:before,
+.copy-text.active button:after {
+	display: block;
+}
+textarea#text-area {
+    height: 180px;
+    width: 70%;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+#submit-1{
+    width: 30%;
+    text-align: center;
+    padding-right: 0px;
+    color: var(--third-color);
+}

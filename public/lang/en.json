@@ -1,0 +1,11 @@
+{
+  "admin": {
+    "errors": {
+      "notFound": {
+        "title": "Page not found :(",
+        "description": "Excuse me! This server was not found",
+        "backHome": "Back to Home Page"
+      }
+    }
+  }
+}

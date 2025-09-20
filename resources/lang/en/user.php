@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'updated'                           => 'The data has been modified successfully.',
+    'incorrect_old_pass'                => 'The old password is incorrect.',
+    'account_deleted'                   => 'Account successfully deleted.',
+    'invitation_exist'                  => 'Invitation already exists.',
+    'cant_send_invitation_to_yourself'  => 'You can\'t send invitation to yourself.',
+    'invitation_sent'                   => 'Invitation has been sent.',
+    'invitation_dosnt_exist'            => 'Invitation dosn\'t exist.',
+    'invitation_accepted'               => 'Invitation accepted.',
+    'invitation_rejected'               => 'Invitation rejected.',
+    'invitation_deleted'                => 'Invitation deleted.',
+    'number_dosnt_exist'                => 'Number dosn\'t exist.',
+    'number_updated'                    => 'Number updated.',
+    'number_deleted'                    => 'Number deleted.',
+    'valid'                             => 'Valid',
+    'expired'                           => 'expired',
+    'waiting'                           => 'Waiting for result',
+    'won'                               => 'Won',
+    'lost'                              => 'No win',
+    'address_saved'                     => 'Address saved',
+    'address_updated'                   => 'Address updated',
+    'address_deleted'                   => 'Address deleted',
+];

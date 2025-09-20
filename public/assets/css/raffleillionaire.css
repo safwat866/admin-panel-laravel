@@ -1,0 +1,262 @@
+  img.r-td {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search {
+	width: 60px;
+	height: 60px;
+	transform: 0.5s;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+	border-radius: 60px;
+    float: right;
+    margin-top: -3rem;
+	box-shadow: 0 0 0 0 5px var(--four-color);
+}
+
+.search.active {
+	width: 360px;
+}
+
+.search .icon {
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	z-index: 1000;
+	cursor: pointer;
+	position: absolute;
+	background: #fff;
+	border-radius: 60px;
+	align-items: center;
+	justify-content: center;
+    
+}
+
+.search .icon:before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	border-radius: 50%;
+	border: 3px solid var(--secondary-color);
+	transform: translate(-4px, -4px);
+}
+
+.search .icon:after {
+	content: "";
+	width: 3px;
+	height: 12px;
+	position: absolute;
+	background:var(--secondary-color);
+	transform: translate(6px, 6px) rotate(315deg);
+}
+
+.search .input {
+	left: 60px;
+	width: 300px;
+	height: 60px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+.search .input input {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding: 10px 0;
+	position: absolute;
+}
+
+.clear {
+	top: 50%;
+	right: 15px;
+	width: 15px;
+	height: 15px;
+	display: flex;
+	cursor: pointer;
+	background: #ff0;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-50%);
+}
+
+.clear:before {
+	width: 1px;
+	height: 15px;
+	content: "";
+	position: absolute;
+	background: #999;
+	transform: rotate(45deg);
+}
+
+.clear:after {
+	width: 1px;
+	height: 15px;
+	content: "";
+	position: absolute;
+	background: #999;
+	transform: rotate(315deg);
+}
+.v-coupen{
+    background-image: url(../images/icons/raffel-tickets.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 280px;
+    
+}
+
+.passing {
+    margin-top: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    /* left: 37%; */
+    float: right;
+    margin-right: -7.8rem;
+}
+.voucher-img1.mb-3{
+    position: absolute;
+
+    width: 30%;
+    margin-top: -15.5rem;
+}
+.voucher-img2.mb-3{
+    position: absolute;
+
+    width: 30%;
+    margin-top: -12rem;
+}
+.voucher-img.mb-3:hover, .voucher-img1.mb-3:hover, .voucher-img2.mb-3:hover{
+    transform: translateY(-3rem);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .voucher-img1.mb-3{
+        position: absolute;
+        width: 42%;
+        margin-top: -15.5rem;
+    }
+    .voucher-img2.mb-3{
+        position: absolute;
+        width: 42%;
+        margin-top: -12rem;
+    }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    .voucher-img1.mb-3{
+        position: absolute;
+        
+        width: 40%;
+        margin-top: -15.5rem;
+    }
+    .voucher-img2.mb-3{
+        position: absolute;
+       
+        width: 40%;
+        margin-top: -12rem;
+    }
+}
+h6.head-r {
+    float: right;
+    margin-right: 4rem;
+}
+span.head-r-b {
+    font-size: var(--h6);
+    float: right;
+    margin-top: -2.2rem;
+    margin-right: 2.5rem;
+}
+.raffel-ball {
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    background: rgb(163 21 157);
+    background: linear-gradient(180deg, rgb(163 21 157) 11%, rgba(0,212,255,0) 11%);
+
+}
+a.float-right.refresh {
+    margin-top: -3rem;
+}
+i.fa.fa-users.rm-ico {
+    color: var(--secondary-color);
+    position: absolute;
+    margin-left: 21rem;
+    margin-top: -3.2rem;
+    font-size: 2.8rem;
+}
+button.raffle-num {
+    background: var(--third-color);
+    border: 1px solid var(--secondary-color);
+    font-size: var(--h6);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    align-content: space-around;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    color: black;
+}
+button.raffle-num:hover{
+    background: var(--secondary-color);   
+    color: var(--third-color);
+    border: 1px solid var(--secondary-color);
+    
+    transform: translateY(-3px);
+}
+.cart-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+.raffle-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.stock {
+  
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: var(--four-color);
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: var(--h6);
+}
+.choose{
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+span.sold{
+    color: var(--secondary-color);
+    font-weight: var(--font-weight1);
+}
+.img-car{
+    width: 90%;
+    border-radius: 10px;
+}

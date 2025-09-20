@@ -1,0 +1,288 @@
+:root {
+    --h1: 4.209rem;
+    --h2: 3.157rem;
+    --h3: 2.2rem;
+    --h4: 1.9rem;
+    --h5: 1.56rem;
+    --h6: 1.30rem;
+    --p: 1.125rem;
+    --small: 1rem;
+    --special:7.5rem;
+    --primary-font:'Lato', sans-serif;
+    --secondary-font:'Pacifico', sans-serif;
+    --padding:0.5rem;
+    --font-weight:400;
+    --font-weight1:600;
+    --primary-color:#000000;
+    --secondary-color: #A3159D;
+    --third-color: #fff;
+    --four-color: #FBBF11;
+  
+  }
+
+::selection{
+    color: #fff;
+    background: #7d2ae8;
+  }
+  .view-modal, .popup{
+    position: absolute;
+    left: 50%;
+  }
+  button{
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
+  }
+  .view-modal{
+
+    color: var(--third-color);
+    font-size: 24px;
+    margin-top: 5px;
+   
+    background: transparent;
+    
+  
+  }
+  .popup{
+    background: var(--third-color);
+    background: linear-gradient(180deg, rgb(251 191 17) 25%, rgb(255 255 255) 9%);
+    padding: 25px;
+    border-radius: 15px;
+    top: -150%;
+    max-width: 500px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: top 0s 0.2s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+  }
+  .popup.show{
+    top: 50%;
+    opacity: 1;
+    pointer-events: auto;
+    transform:translate(-50%, -50%) scale(1);
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+                
+
+  }
+  .popup :is(header, .icons, .field){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .popup header{
+    padding-bottom: 15px;
+   color: var(--primary-color);
+  }
+  header span{
+    font-size: 21px;
+    font-weight: 600;
+  }
+  header .close, .icons a{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+  header .close{
+    color: #878787;
+    font-size: 17px;
+    background: #f2f3fb;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+  }
+  header .close:hover{
+    background: #ebedf9;
+  }
+  .popup .content{
+    margin: 20px 0;
+  }
+  .popup .icons{
+    margin: 15px 0 20px 0;
+  }
+  .content p{
+    font-size: 16px;
+  }
+  .content .icons a{
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  
+ 
+  i.fa.fa-users:active{
+color: var(--secondary-color) !important;
+  }
+  button.view-modal:active{
+    color: var(--secondary-color) !important;
+      }
+ 
+  input[type="text"] {
+    width: 73%;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  input[type="submit"] {
+    color: #fff;
+    padding: 10px;
+    background: var(--secondary-color);
+    border: none;
+    width: 25%;
+    border-radius: 4px;
+  }
+  input[type="text"]:hover{
+    background: var(--four-color);
+  }
+
+
+
+  /* cart popups section */
+  .popup1 {
+    position: absolute;
+    left: 62%;
+    top: 32px;
+}
+  button{
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: background 0.1s linear, border-color 0.1s linear, color 0.1s linear;
+  }
+  .view-modal1{
+
+    color: var(--third-color);
+    font-size: 30px;
+    margin-top: 5px;
+   
+    background: transparent;
+    
+  
+  }
+  .popup1{
+    background: var(--third-color);
+    background: linear-gradient(180deg, rgb(251 191 17) 25%, rgb(255 255 255) 9%);
+    padding: 25px;
+    border-radius: 15px;
+   
+    max-width: 500px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: top 0s 0.2s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+  }
+  .popup1.show{
+    top: 80%;
+    opacity: 1;
+    pointer-events: auto;
+    transform:translate(-50%, -50%) scale(1);
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+                
+
+  }
+  .popup1 :is(header, .icons, .field){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .popup1 header{
+    padding-bottom: 15px;
+   color: var(--primary-color);
+  }
+  header span{
+    font-size: 21px;
+    font-weight: 600;
+  }
+  header .close, .icons a{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+  header .close{
+    color: #878787;
+    font-size: 17px;
+    background: #f2f3fb;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+  }
+  header .close:hover{
+    background: #ebedf9;
+  }
+  .popup1 .content{
+    margin: 20px 0;
+  }
+  .popup1 .icons{
+    margin: 15px 0 20px 0;
+  }
+  .content p{
+    font-size: 16px;
+  }
+  .content .icons a{
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  i.fa.fa-users.dd{
+    color: var(--secondary-color);
+  }
+ 
+  i.fa.fa-users.dd:active{
+color: var(--four-color) !important;
+  }
+  button.view-modal1:active{
+    color: var(--four-color) !important;
+      }
+ 
+  button.view-modal:active{
+    color: var(--secondary-color) !important;
+      }
+ 
+  input[type="text"] {
+    width: 73%;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  input[type="submit"] {
+    color: #fff;
+    padding: 10px;
+    background: var(--secondary-color);
+    border: none;
+    width: 25%;
+    border-radius: 4px;
+  }
+  input[type="text"]:hover{
+    background: var(--four-color);
+  }
+
+
+  

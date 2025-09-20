@@ -1,0 +1,34 @@
+.swal2-confirm {
+    margin: auto 10px !important;
+}
+.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar-brand-image {
+    height: auto !important;
+}
+
+body.theme-light .navbar-light {
+    background-color: #3b38eb0d !important;
+}
+
+.theme-dark .navbar {
+    background-color: #13161d !important;
+}
+body.theme-light {
+    background-image: url(http://127.0.0.1:8000/site/images/bg/bg-image-1.jpg);
+}
+
+.page.page-center {
+    background-image: url(http://127.0.0.1:8000/site/images/bg/bg-image-1.jpg);
+}
+
+.nav-item.active {
+    font-weight: bolder;
+    color: #121d5e;
+}
+/* .theme-dark .navbar-brand-image {
+    filter: brightness(4.5);
+} */
