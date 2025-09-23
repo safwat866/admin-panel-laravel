@@ -52,7 +52,6 @@
             <!-- / Style Switcher-->
 
 
-
             
 
             <!-- User -->
@@ -64,7 +63,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item">
+                        <a class="dropdown-item" href="#">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
@@ -72,8 +71,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-medium d-block">{{ $adminLogin->name ?? "" }}</span>
-                                    <small class="text-muted">{{ $adminLogin->job ?? "" }}</small>
+                                    <span class="fw-medium d-block">{{ auth()->user()->name }}</span>
+                                    <small class="text-muted">{{ auth()->user()->email }}</small>
                                 </div>
                             </div>
                         </a>
@@ -94,9 +93,20 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{route("logout")}}" id="logout-button">
                             <i class="ti ti-logout me-2 ti-sm"></i>
                             <span class="align-middle">{{ __('site.logout') }}</span>
+                            <form action="{{route("logout")}}" id="logout" method="POST">
+                                @csrf
+                            </form>
+                            <script>
+                                const logoutForm = document.getElementById('logout');
+                                const logoutBtn = document.getElementById("logout-button");
+                                logoutBtn.onclick = function (e) {
+                                    e.preventDefault();
+                                    logoutForm.submit();
+                                }
+                            </script>
                         </a>
                     </li>
                 </ul>
@@ -107,3 +117,5 @@
 
 
 </nav>
+
+

@@ -130,5 +130,5 @@
 
         <div class="layout_"></div>
 
-        {{ $tableContent }}
+        {{ $slot }}
     </div>

@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="{{ asset('/') }}dashboard/assets/vendor/libs/toastr/toastr.css">
 
     <!-- Page CSS -->
-
+    @vite('resources/css/app.css')
     <!-- Helpers -->
     <script src="{{ asset('/') }}dashboard/assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->

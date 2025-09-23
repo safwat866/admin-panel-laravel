@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\AuthMiddleware;
 use App\Http\Middleware\SetLocaleFromSession;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -14,6 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(append: [
             SetLocaleFromSession::class, // Add your middleware here
+        ]);
+        $middleware->alias([
+            'auth' => AuthMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

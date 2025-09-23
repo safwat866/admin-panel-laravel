@@ -2,8 +2,8 @@
 <script src="{{ asset('/') }}dashboard/assets/js/jquery.form.min.js" ></script>
 <script>
     $(document).ready(function() {
-        $('.{{ $className }}').attr('enctype', 'multipart/form-data');
-        $(document).on('submit', '.{{ $className }}', function(e) {
+        $('.formAjax').attr('enctype', 'multipart/form-data');
+        $(document).on('submit', '.formAjax', function(e) {
             e.preventDefault();
             $('.waves-ripple').remove();
 
