@@ -24,10 +24,10 @@
         </a>
     </li>
 
-    <li class="menu-item   @if (Route::currentRouteName() == '#')
+    <li class="menu-item   @if (Route::currentRouteName() == 'profile.index')
         open active
     @endif ">
-        <a class="menu-link " href="{{route("dashboard")}}">
+        <a class="menu-link " href="{{route("profile.index")}}">
             <i class="menu-icon menu-icon tf-icons fa fa-user"></i>
             <div data-i18n="البروفايل">البروفايل </div>
 
@@ -47,20 +47,20 @@
         </a>
     </li>
 
-    <li class="menu-item   @if (Route::currentRouteName() == '#')
+    <li class="menu-item   @if (Route::currentRouteName() == 'admins.index')
         open active
     @endif ">
-        <a class="menu-link " href="http://127.0.0.1:8000/admin/admins">
+        <a class="menu-link " href="{{ route("admins.index") }}">
             <i class="menu-icon menu-icon tf-icons fa fa-users"></i>
             <div data-i18n="المشرفين">المشرفين </div>
 
         </a>
     </li>
 
-    <li class="menu-item  @if (Route::currentRouteName() == '#')
+    <li class="menu-item  @if (Route::currentRouteName() == 'roles.index')
         open active
     @endif  ">
-        <a class="menu-link " href="http://127.0.0.1:8000/admin/roles">
+        <a class="menu-link " href="{{ route("roles.index") }}">
             <i class="menu-icon menu-icon tf-icons fa fa-eye"></i>
             <div data-i18n="قائمة الصلاحيات">قائمة الصلاحيات </div>
 

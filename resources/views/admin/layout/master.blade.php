@@ -1,7 +1,7 @@
 @include('admin.layout.partial.header')
 
-<div class="layout-wrapper layout-content-navbar">
-    <div class="layout-container">
+<div class="layout-wrapper layout-content-navbar !block">
+    <div class="layout-container ">
         <!-- Menu -->
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
@@ -76,8 +76,6 @@
 </div>
 @include('admin.layout.partial.footer')
 <!-- / Footer -->
-<x-admin.alert />
-
 
 </body>
 

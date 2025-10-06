@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -11,8 +14,9 @@ class UsersController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view("admin.users.index");
+    {   
+        $users = User::get();
+        return view("admin.users.index", compact('users'));
     }
 
     /**
@@ -20,7 +24,12 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        if (!Auth::user()->can("add user")) {
+            return back()->withErrors([
+                "permession" => "You don't have permession to do this action"
+            ]);
+        }
+        return view("admin.users.create");
     }
 
     /**
@@ -28,31 +37,28 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+         $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required',
+            'number' => 'required|min:11',
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        if ($request->file('avatar')) {
+            
+            $path = $request->file('avatar')->store('users', 'public');
+            $name = basename($path);
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'number' => $request->number,
+            'profile' => $name ?? "default.png",
+        ]);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+        return redirect()->route("users.index");
     }
 
     /**
@@ -60,6 +66,13 @@ class UsersController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route("admins.index");
+    }
+    public function bulkDelete(Request $request) {
+        
+        User::destroy($request->users);
+        return back();
     }
 }

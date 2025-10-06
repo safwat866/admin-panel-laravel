@@ -54,7 +54,7 @@
 <div class="row mt-3">
 
     <div class="col-lg-3 col-sm-6 mb-4 text-center">
-        <a href="http://127.0.0.1:8000/admin/admins"  style="color: inherit">
+        <a href="{{ route("admins.index") }}"  style="color: inherit">
             <div class="card card-border-shadow-info h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-2 pb-1">
@@ -70,7 +70,7 @@
     </div>
 
     <div class="col-lg-3 col-sm-6 mb-4 text-center">
-        <a href="http://127.0.0.1:8000/admin/roles"  style="color: inherit">
+        <a href="{{route("roles.index")}}"  style="color: inherit">
             <div class="card card-border-shadow-danger h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-2 pb-1">
@@ -86,7 +86,7 @@
     </div>
 
     <div class="col-lg-3 col-sm-6 mb-4 text-center">
-        <a href="http://127.0.0.1:8000/admin/users"  style="color: inherit">
+        <a href="{{ route("users.index") }}"  style="color: inherit">
             <div class="card card-border-shadow-warning h-100">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-2 pb-1">

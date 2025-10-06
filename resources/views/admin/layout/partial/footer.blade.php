@@ -40,7 +40,6 @@
         localStorage.setItem('adminLang', $('html').attr('lang'))
     </script>
 
-    <x-admin.firebase authType="admin"/>
 
     @yield('config-js')
     @yield('js')

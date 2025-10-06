@@ -6,12 +6,12 @@
     <div class="table_buttons mb-1">
         <div class="flex items-center">
             <div>
-                <a href="{{route("users.create")}}"
+                <a href="{{route("admins.create")}}"
                     class="btn btn-primary waves-effect waves-light m-2"><i class="fa fa-plus"></i> إضافة</a>
             </div>
-            <form action="{{ route("users.bulkDelete") }}" method="post" id="bulk_delete">
+            <form action="{{ route('admins.bulkDelete') }}" method="post" id="bulk_delete">
                 @csrf
-                <button type="submit" id="delete_product_main"
+                <button type="submit" id="delete_product_main" data-route="http://127.0.0.1:8080/admin/users/delete/all"
                     class="btn btn-danger waves-effect waves-light m-2 delete_all_button !hidden"><i
                         class="fa fa-trash"></i> حذف المحدد</button>
             </form>
@@ -70,6 +70,7 @@
         .display_none {
             display: none;
         }
+
         input[type="checkbox"] {
             width: 20px;
             height: 20px;
@@ -95,41 +96,53 @@
                     <th>الصورة</th>
                     <th>اسم المستخدم</th>
                     <th>الاميل</th>
-                    <th> رقم الهاتف </th>
+                    <th>الصلاحيات</th>
+                    <th> عمليات</th>
 
                 </tr>
             </thead>
             <tbody>
 
-                @foreach ($users as $user)
-                    <tr>
-                        <th><input type="checkbox" value="{{ $user->id }}" class="product_checkbox"></th>
-                        <th>{{ $user->id }}</th>
-                        <th class="flex justify-center items-center"><img class="w-10" src="{{ asset("storage/users/" . $user->profile) }}" /></th>
-                        <th>{{$user->name}}</th>
-                        <th>{{ $user->email }}</th>
-                        <th>{{ $user->number }}</th>
-                    </tr>
+                @foreach ($admins as $admin)
+                <tr>
+                <th><input type="checkbox" value="{{ $admin->id }}" class="product_checkbox"></th>
+                <th>{{$admin->id}}</th>
+                    <th class="flex justify-center items-center"><img class="w-10" src="{{ asset("storage/users/" . $admin->profile) }}" /></th>
+                    <th>{{ $admin->name }}</th>
+                    <th>{{$admin->email}}</th>
+                    <th>{{$admin->roles->pluck('name')->implode(', ')}}</th>
+                    <th class="product-action">
+                        <a class="btn rounded-pill btn-primary" href="{{route('admins.edit', $admin->id)}}">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        @if ($admin->name != 'Admin')
+                            <a class="delete-row btn rounded-pill btn-danger mx-2 !text-white" onclick="event.preventDefault();document.getElementById('admin-delete-form').submit();"><i class="fa fa-trash"></i></a>
+                        @endif
+
+                        <form action="{{ route('admins.destroy', $admin->id) }}" method="POST" id="admin-delete-form">
+                            @method('DELETE')
+                            @csrf
+                        </form>
+                    </th>
+                </tr>
                 @endforeach
 
             </tbody>
         </table>
     </div>
 
-
-    @error ("permession")
-        <script>
-            alert("{{ $message }}");
-        </script>
-    @enderror
-
+        @error('permission')
+            <script>
+                alert("{{ $message }}")
+            </script>
+        @enderror
+        
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $("#main_checkbox").on("change", function(e) {
             if ($(this).is(':checked')) {
                 $(".product_checkbox").prop("checked", true)
-                
                 $("#delete_product_main").removeClass("!hidden");
             } else {
                 $(".product_checkbox").prop("checked", false)
@@ -169,6 +182,4 @@
             document.getElementById("bulk_delete").submit();
         })
     </script>
-
-
     @endsection
